@@ -8,15 +8,15 @@
     <h1>Animal game by Benitha Sri Panchagiri</h1>
 
     <form>
-        <label for="hiddenAnimal">The hidden animal type:</label>
-        <input type="password" id="hiddenAnimal" value="Chicken">
+        <label for="thehiddenAnimal">The hidden animal type:</label>
+        <input type="password" id="thehiddenAnimal" value="Chicken">
       
-        <label for="animalGuess">Guess the animal:</label>  
-        <input type="text" id="animalGuess">
+        <label for="GuesstheAnimal">Guess the animal:</label>  
+        <input type="text" id="GuesstheAnimal">
         
         <button onclick="checkAnimal()">Check the guess</button>
         
-        <p id="result"></p>
+        <div id="result"></div>
       </form>
       
       <script>
@@ -24,15 +24,15 @@
         let correct = 0;
       
         function checkAnimal() {
-          const hidden = document.getElementById("hiddenAnimal").value;
-          const guess = document.getElementById("animalGuess").value;
+          const hidden = document.getElementById("thehiddenAnimal").value;
+          const guess = document.getElementById("GuesstheAnimal").value;
           
           if (guess === hidden) {
             correct++;
-            alert("You got it!");
+            alert("Ruff Ruff");
           } else {
             wrong++;
-            alert("uHA! That's not it. Try again!");
+            alert("Grrr");
           }
           
           document.getElementById("result").innerHTML = `Correct: ${correct}, Wrong: ${wrong}`;
