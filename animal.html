@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ANIMAL</title>
+    </head>
+ 
+<body>
+    <h1>Animal game by Benitha Sri Panchagiri</h1>
+
+    <form>
+        <label for="hiddenAnimal">The hidden animal type:</label>
+        <input type="password" id="hiddenAnimal" value="Chicken">
+      
+        <label for="animalGuess">Guess the animal:</label>  
+        <input type="text" id="animalGuess">
+        
+        <button onclick="checkAnimal()">Check the guess</button>
+        
+        <p id="result"></p>
+      </form>
+      
+      <script>
+        let wrong = 0;
+        let correct = 0;
+      
+        function checkAnimal() {
+          const hidden = document.getElementById("hiddenAnimal").value;
+          const guess = document.getElementById("animalGuess").value;
+          
+          if (guess === hidden) {
+            correct++;
+            alert("You got it!");
+          } else {
+            wrong++;
+            alert("uHA! That's not it. Try again!");
+          }
+          
+          document.getElementById("result").innerHTML = `Correct: ${correct}, Wrong: ${wrong}`;
+        }
+      </script>
+
+</body>
+</html> 
